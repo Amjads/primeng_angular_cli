@@ -4,8 +4,7 @@ import {ConfirmationService, Message} from "primeng/components/common/api";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers:  [ConfirmationService]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   name: string;
@@ -14,12 +13,12 @@ export class AppComponent {
 
   constructor(private confirmationService: ConfirmationService) {}
 
-  onChangeEvent({target}){
+  onChangeEvent({target}) {
     this.name = target.value;
     console.log(this.name);
   }
 
-  greetMe(){
+  greetMe() {
 
     this.confirmationService.confirm({
       message: ` Hey ${this.name}, do you like PrimeNG?`,

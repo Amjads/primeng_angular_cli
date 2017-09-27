@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import {InputTextModule} from 'primeng/components/inputtext/inputtext';
-import {ButtonModule} from 'primeng/components/button/button';
-import {ConfirmDialogModule} from 'primeng/components/confirmdialog/confirmdialog';
+
 import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {InputTextModule, ButtonModule, ConfirmDialogModule, ConfirmationService} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -13,13 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
-   InputTextModule,
+    BrowserAnimationsModule,
+    InputTextModule,
     ButtonModule,
     ConfirmDialogModule
   ],
-  providers: [],
+  providers: [ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
